@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -14,10 +15,14 @@ export class AppComponent implements OnInit {
 
   title = 'helping.tools';
 
+  constructor(private router: Router){
+
+  }
+
   ngOnInit() {
     this.items = [
       {
-        icon: 'pi pi-fw pi-file',
+        icon: 'pi pi-bars',
         command: (event?: any) => this.menuClick(event)
 
       },
@@ -52,8 +57,12 @@ export class AppComponent implements OnInit {
   }
   menuClick($event) {
     console.log($event);
-    if($event.item.icon === 'pi pi-fw pi-file'){
+    if($event.item.icon === 'pi pi-bars'){
       this.sidebarVisible = true;
     }
+  }
+
+  redirectToProfile(){
+    this.router.navigateByUrl('/dashboard/profile')
   }
 }

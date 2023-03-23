@@ -6,7 +6,7 @@
     <div class="col-12">
         <p-menubar [model]="items">
             <ng-template pTemplate="end">
-                <img class="user-profile mr-3" src="../assets/images/img_avatar.png">
+                <img class="user-profile mr-3" (click)="redirectToProfile()" src="../assets/images/img_avatar.png">
             </ng-template>
         </p-menubar>
     </div>
