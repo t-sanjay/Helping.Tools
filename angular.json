@@ -1,0 +1,136 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "helping.tools": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/helping.tools",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss",
+              {
+                "input": "src/themes/theme-saga-blue.scss",
+                "bundleName": "saga-blue",
+                "inject": false
+              },
+              {
+                "input": "src/themes/theme-vela-blue.scss",
+                "bundleName": "vela-blue",
+                "inject": false
+              },
+              {
+                "input": "src/themes/theme-arya-blue.scss",
+                "bundleName": "arya-blue",
+                "inject": false
+              },
+              {
+                "input": "src/themes/theme-md-light-indigo.scss",
+                "bundleName": "md-light-indigo",
+                "inject": false
+              },
+              {
+                "input": "src/themes/theme-md-dark-indigo.scss",
+                "bundleName": "md-dark-indigo",
+                "inject": false
+              },
+              {
+                "input": "src/themes/theme-bootstrap4-light-purple.scss",
+                "bundleName": "bootstrap4-light-purple",
+                "inject": false
+              },
+              {
+                "input": "src/themes/theme-bootstrap4-dark-purple.scss",
+                "bundleName": "bootstrap4-dark-purple",
+                "inject": false
+              }
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "helping.tools:build:production"
+            },
+            "development": {
+              "browserTarget": "helping.tools:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "helping.tools:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
