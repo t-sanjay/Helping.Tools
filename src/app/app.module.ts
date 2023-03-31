@@ -8,6 +8,9 @@ import { AuthenticateModule } from './authenticate/authenticate.module';
 import { UserModule } from './user/user.module';
 import { SidebarModule } from 'primeng/sidebar';
 import { MenubarModule } from 'primeng/menubar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { ListboxModule } from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,11 @@ import { MenubarModule } from 'primeng/menubar';
     AuthenticateModule,
     UserModule,
     SidebarModule,
-    MenubarModule
+    MenubarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    OverlayPanelModule,
+    ListboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
