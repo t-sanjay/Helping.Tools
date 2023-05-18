@@ -11,13 +11,15 @@ import { MenubarModule } from 'primeng/menubar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ListboxModule } from 'primeng/listbox';
+import { InputTextModule } from 'primeng/inputtext';
+import { HttpClientModule } from '@angular/common/http';
+import { DropdownModule } from 'primeng/dropdown';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     AuthenticateModule,
@@ -27,9 +29,11 @@ import { ListboxModule } from 'primeng/listbox';
     FormsModule,
     ReactiveFormsModule,
     OverlayPanelModule,
-    ListboxModule
+    ListboxModule,
+    InputTextModule,
+    DropdownModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

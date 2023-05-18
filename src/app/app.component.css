@@ -3,3 +3,7 @@
     max-width: 40px;
     max-height: 40px;
 }
+
+:host ::ng-deep .p-hidden-accessible {
+    display: none;
+  }

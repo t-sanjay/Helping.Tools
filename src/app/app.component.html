@@ -4,17 +4,42 @@
   (visibleChange)="modelChange($event)"
   [closeOnEscape]="true"
 >
+  <ng-template pTemplate="header"
+    ><div style="display: block; position: relative; left: 2.4rem">
+      <h2>HELPING.TOOLS</h2>
+    </div></ng-template
+  >
+  <ng-template pTemplate="content">
+    <div class="grid text-center">
+      <div class="col-12">
+        <p>Hey User <br> Welcome to your world</p>
+      </div>
+      <div class="col-12">2</div>
+      <div class="col-12">3</div>
+    </div>
+  </ng-template>
 </p-sidebar>
 
 <div class="grid" *ngIf="isLoggedIn()">
   <div class="col-12">
     <p-menubar [model]="items">
       <ng-template pTemplate="end">
-        <img
-          class="user-profile mr-3"
-          (click)="op.toggle($event)"
-          src="../assets/images/img_avatar.png"
-        />
+        <div class="card flex flex-wrap justify-content-center gap-3">
+          <span class="p-input-icon-right">
+            <input type="text" pInputText placeholder="Search" />
+            <i
+              class="pi pi-search"
+              style="position: relative; right: 1.5rem"
+            ></i>
+          </span>
+          <span>
+            <img
+              class="user-profile mr-3"
+              (click)="op.toggle($event)"
+              src="../assets/images/img_avatar.png"
+            />
+          </span>
+        </div>
       </ng-template>
     </p-menubar>
   </div>

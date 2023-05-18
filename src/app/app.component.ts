@@ -50,31 +50,29 @@ export class AppComponent implements OnInit {
         command: (event?: any) => this.menuClick(event),
       },
       {
-        label: 'Edit',
-        icon: 'pi pi-fw pi-pencil',
+        label: 'Home',
+        icon: 'pi pi-home',
         command: (event?: any) => this.menuClick(event),
       },
       {
-        label: 'Users',
-        icon: 'pi pi-fw pi-user',
+        label: 'Services',
+        icon: 'pi pi-desktop',
         command: (event?: any) => this.menuClick(event),
       },
       {
-        label: 'Events',
-        icon: 'pi pi-fw pi-calendar',
-        command: (event?: any) => this.menuClick(event),
-      },
-      {
-        label: 'Quit',
-        icon: 'pi pi-fw pi-power-off',
+        label: 'Innovate',
+        icon: 'pi pi-file-edit',
         command: (event?: any) => this.menuClick(event),
       },
     ];
   }
   menuClick($event) {
-    console.log($event);
     if ($event.item.icon === 'pi pi-bars') {
       this.sidebarVisible = true;
+    } else if ($event.item.label === 'Services') {
+      this.router.navigateByUrl('/dashboard');
+    } else if ($event.item.label === 'Home') {
+    } else if ($event.item.label === 'Innovate') {
     }
   }
 

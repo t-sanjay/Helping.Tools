@@ -5,3 +5,13 @@
 .w-100{
     min-width: 100%;
 }
+
+body {
+    font-family: var(--font-family);
+}
+
+::ng-deep body .ui-button:enabled:focus {
+    outline: 0 none;
+    outline-offset: 0px;
+    box-shadow: none  
+}
