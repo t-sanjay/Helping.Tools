@@ -13,8 +13,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 To Implement themes we have used Prime ng  <br />
 UI - https://github.com/t-sanjay/helping.tools <br />
-Solidity -  <br />
-Backend - <br />
 
 
 Angular – <br />
