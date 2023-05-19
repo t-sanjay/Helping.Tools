@@ -29,7 +29,6 @@ signup() {
         this.signupForm.value.email,
         this.signupForm.value.password
       );
-      console.log(this.signupForm.value);
     } else{
       console.error('invalid data');
     }

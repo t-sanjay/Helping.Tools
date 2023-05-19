@@ -10,7 +10,8 @@ export const environment = {
       },
       currencyKey : 'c59d3746bb0b7b7880ef9fd6',
       openAi: {
+        env_name: '',
         organisationId: 'org-Gw7PIYbNZGsGTjmLpPK14qHV',
-        apiKey: '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'
+        apiKey: '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'
       }
 };

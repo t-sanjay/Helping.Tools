@@ -14,6 +14,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { ChatGptComponent } from './chat-gpt/chat-gpt.component';
 import { SafePipe } from './pipes/safe.pipe';
+import { BlockChainComponent } from './block-chain/block-chain.component';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { SafePipe } from './pipes/safe.pipe';
     WorldRankingComponent,
     CurrencyConverterComponent,
     ChatGptComponent,
-    SafePipe
+    SafePipe,
+    BlockChainComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +34,7 @@ import { SafePipe } from './pipes/safe.pipe';
     ButtonModule,
     ReactiveFormsModule,
     SimpleToolsRoutingModule,
+    InputTextareaModule,
     CardModule,
     TabViewModule,
     DropdownModule,

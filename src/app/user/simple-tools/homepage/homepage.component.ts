@@ -19,6 +19,9 @@ export class HomepageComponent {
     } else if (serviceName === 'world-ranking') {
       this.router.navigateByUrl('/world-ranking');
     }
+    else if (serviceName === 'block-chain') {
+      this.router.navigateByUrl('/block-chain');
+    }
     else if (serviceName === 'chat-gpt') {
       this.router.navigateByUrl('/chat-gpt');
     }

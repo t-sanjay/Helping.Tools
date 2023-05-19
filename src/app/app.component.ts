@@ -58,12 +58,12 @@ export class AppComponent implements OnInit {
         label: 'Services',
         icon: 'pi pi-desktop',
         command: (event?: any) => this.menuClick(event),
-      },
-      {
-        label: 'Innovate',
-        icon: 'pi pi-file-edit',
-        command: (event?: any) => this.menuClick(event),
-      },
+      }
+      // {
+      //   label: 'Innovate',
+      //   icon: 'pi pi-file-edit',
+      //   command: (event?: any) => this.menuClick(event),
+      // },
     ];
   }
   menuClick($event) {
@@ -72,6 +72,7 @@ export class AppComponent implements OnInit {
     } else if ($event.item.label === 'Services') {
       this.router.navigateByUrl('/dashboard');
     } else if ($event.item.label === 'Home') {
+      this.router.navigateByUrl('/dashboard');
     } else if ($event.item.label === 'Innovate') {
     }
   }

@@ -5,6 +5,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { WorldRankingComponent } from './world-ranking/world-ranking.component';
 import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 import { ChatGptComponent } from './chat-gpt/chat-gpt.component';
+import { BlockChainComponent } from './block-chain/block-chain.component';
 
 const routes: Routes = [
   {path:'', component: HomepageComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'currency-converter', component: CurrencyConverterComponent},
   {path:'world-ranking', component: WorldRankingComponent},
   {path:'chat-gpt', component: ChatGptComponent},
+  {path:'block-chain', component: BlockChainComponent},
 ];
 
 @NgModule({

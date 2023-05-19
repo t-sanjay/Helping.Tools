@@ -1,0 +1,38 @@
+<div class="grid p-4 crtTool">
+  <div class="col-12">
+    <h2>Connect MetaMask Wallet</h2>
+    <p>Let's go crypto</p>
+  </div>
+  <div class="col-4 col-offset-1 p-6 crtImage">
+    <img src="../../../../assets/images/eth.png" alt="" />
+  </div>
+  <div class="col-6">
+    <div class="col-12 crtTool">
+      <h1>Crypto <span>currency</span></h1>
+    </div>
+    <div class="col-12 crtTool">
+      <p>
+        A cryptocurrency is a digital currency, which is an alternative form of
+        payment created using encryption algorithms.
+      </p>
+    </div>
+    <div class="col-12 grid" *ngIf="!walletConnected">
+      <button
+        pButton
+        pRipple
+        label="Connect Wallet"
+        (click)="connectToWallet()"
+        class="primary"
+      ></button>
+    </div>
+
+    <div class="col-12" *ngIf="walletConnected">
+       <h2>Wallet Address </h2>  {{ walletId }}
+    </div>
+    <div class="col-12" *ngIf="walletConnected">
+        <p class="text-danger">
+            To Disconnet your MetaMask Wallet, open MetaMask click on connected sites and then disconnect.
+        </p>
+    </div>
+  </div>
+</div>

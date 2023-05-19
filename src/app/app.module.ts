@@ -12,11 +12,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { ListboxModule } from 'primeng/listbox';
 import { InputTextModule } from 'primeng/inputtext';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { DropdownModule } from 'primeng/dropdown';
+import { LoaderComponent } from './shared/components/loader/loader.component';
+import { LoaderService } from './shared/services/loader.service';
+import { LoaderInterceptor } from './shared/interceptors/loader-interceptor.service';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoaderComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -31,9 +34,12 @@ import { DropdownModule } from 'primeng/dropdown';
     OverlayPanelModule,
     ListboxModule,
     InputTextModule,
-    DropdownModule
+    DropdownModule,
   ],
-  providers: [],
+  providers: [
+    LoaderService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

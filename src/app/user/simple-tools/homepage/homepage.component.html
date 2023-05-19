@@ -1,11 +1,13 @@
 <div class="grid">
-  <div class="col-12">
-    <h2>SERVICES</h2>
-    <p>Let's enjoy the services</p>
+  <div class="grid col-12 p-4 crtTool">
+    <div class="col-12">
+      <h2>SERVICES</h2>
+      <p>Let's enjoy the services</p>
+    </div>
   </div>
   <div class="col-4 text-center">
     <img
-      class="w-100 px-5"
+      class="w-100 px-5 serviceImg"
       src="../../../../assets/images/currency-Conversion.png"
       alt=""
       (click)="redirectToService('currency-converter')"
@@ -16,21 +18,34 @@
       </h3></span
     >
   </div>
-  <div class="col-4 text-center">
+  <!-- <div class="col-4 text-center">
     <img
       (click)="redirectToService('world-ranking')"
-      class="w-100 px-5"
+      class="w-100 px-5 serviceImg"
       src="../../../../assets/images/world-population.png"
       alt=""
     />
     <span>
       <h3 (click)="redirectToService('world-ranking')">World Ranking</h3></span
     >
+  </div> -->
+  <div class="col-4 text-center">
+    <img
+      (click)="redirectToService('block-chain')"
+      class="w-100 px-5 serviceImg"
+      src="../../../../assets/images/blockchain.jpg"
+      alt=""
+    />
+    <span>
+      <h3 (click)="redirectToService('block-chain')">
+        Block Chain Wallet
+      </h3></span
+    >
   </div>
   <div class="col-4 text-center">
     <img
       (click)="redirectToService('chat-gpt')"
-      class="w-100 px-5"
+      class="w-100 px-5 serviceImg"
       src="../../../../assets/images/currency-Conversion.png"
       alt=""
     />
